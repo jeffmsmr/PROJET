@@ -4,21 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title> Eco Ride - Site de covoiturage</title>
 </head>
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg bg-primary ms-auto pt-3 pb-3" data-bs-theme="text-primary">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">
-                <img src="/images/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                Eco Ride</a>
+                <b>Eco Ride.</b>
+              </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="bi bi-person"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                      <a class="dropdown-item" href="/account" data-show="admin">Mon compte</a>
+                      <a class="dropdown-item" href="/signin" data-show="disconnected">Connexion</a>
+                      <a class="dropdown-item" id="signout-btn" data-show="connected">Deconnexion</a>
+                      <a class="dropdown-item" href="/signup" data-show="disconnected">Inscription</a>
+                    </div>
+                  </li>
                   <li class="nav-item">
                     <a class="nav-link" href="/">Accueil</a>
                   </li>
@@ -31,15 +44,6 @@
                   <li class="nav-item">
                     <a class="nav-link" href="/contact">Contact</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/account">Mon compte</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">A propos de nous</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/signin">Connexion</a>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -50,21 +54,22 @@
 
     </main>
 
-    <footer class="bg-dark text-white text-center footer">
+    <footer class="bg-primary text-white text-center footer">
         <div class="row">
+          <div class="col-6 col-lg-4">
+              <a href="/mentions">Consultez nos mentions légales</a>
+            </div>
             <div class="col-12 col-lg-4">
-                <h3 class="text-primary">Contactez nous</h3>
-                <p>assistance@ecoride.fr</p>
-                <p>ou au 06.58.68.68.68</p>
-            </div>
-            <div class="col-6 col-lg-4">
-              <a href="/mentions">Mentions légales</a>
-            </div>
+              <h3 class="text-white">Contactez nous</h3>
+              <p>assistance@ecoride.fr</p>
+              <p>ou au 06.58.68.68.68</p>
+          </div>
             <div class="col-6 col-lg-4">
                 <p>test</p>
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
     <script type="module" src="Router/Router.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>

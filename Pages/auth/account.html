@@ -22,11 +22,44 @@
             <input type="number" class="form-control" id="NbConvivesInput" placeholder="Combien vous êtes habituellement ?"  value="4" name="NbConvives"> 
           </div>
         <div class="text-center">
-            <button type="submit" class="btn btn-primary">Modifier vos informations</button>
-            <button type="button" class="btn btn-danger">Supprimer mon compte</button>
+            <button type="submit" class="btn btn-primary">Sauvegarder</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+              Modifier le mot de passe
+              </button>
         </div>
     </form>
-    <div class="text-center pt-3">
-        <a href="/editPassword">Cliquez ici pour modifier votre mot de passe</a>
+  
+<div class="text-center mt-3 mb-3">
+  <button type="button" class="btn btn-danger">Supprimer mon compte</button>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modifier mon mot de passe</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="PasswordInput" class="form-label">Ancien mot de passe</label>
+            <input type="password" class="form-control" id="PasswordInput" name="Password">
+          </div>
+          <div class="mb-3">
+              <label for="PasswordInput" class="form-label">Nouveau mot de passe</label>
+              <input type="password" class="form-control" id="PasswordInput" name="Password">
+            </div>
+          <div class="mb-3">
+              <label for="ValidatePasswordInput" class="form-label">Validez votre mot de passe</label>
+              <input type="password" class="form-control" id="ValidatePasswordInput" name="PasswordConfirm">
+            </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+        <button type="button" class="btn btn-primary">Sauvegarder</button>
+      </div>
     </div>
+  </div>
 </div>

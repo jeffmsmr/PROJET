@@ -1,13 +1,74 @@
 <div class="hero-scene text-center text-white">
     <div class="hero-scene-content">
-        <h1>Où voulez-vous aller ?</h1>
+        <h2>Roulez. Partagez. Économisez.</h2>
     </div>
 </div>
-<div class="container">
-<form class="d-flex" role="search">
-    <input class="form-control me-2" type="search" placeholder="Départ" aria-label="Search">
-    <input class="form-control me-2" type="search" placeholder="Destination" aria-label="Search">
-    <input class="form-control me-2" type="date">
-    <button class="btn btn-outline-success" type="submit">Rechercher</button>
-  </form>
 </div>
+<div class="container justify-center col-md-6 col-lg-6 col-xl-6 col-12 mt-3">
+    <form>
+        <div class="d-flex justify-content-around mt-4">
+        <div class="mb-3">
+            <input class="form-control me-2" type="search" placeholder="Lieu de départ" aria-label="Search">
+        </div>
+        <div><i class="bi bi-repeat"></i></div>
+        <div class="mb-3">
+            <input class="form-control me-2" type="search" placeholder="Lieu d'arrivée" aria-label="Search">
+        </div>
+        </div>
+          <hr class="container">
+        <div class="mb-3">
+          <label for="dateDepartInput" class="form-label">Date de départ</label>
+          <input class="form-control me-2" type="date"> 
+        </div>
+        <div class="form-check form-switch mb-3">
+            <label class="form-check-label" for="flexSwitchCheckChecked">Trajet régulier</label>
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+        </div>
+        <div class="text-center mb-3 d-flex justify-content-around">
+            <button type="submit" class="btn btn-primary">Rechercher un covoiturage</button>
+            <a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" href="/"><i class="bi bi-plus-circle"></i> Publier une annonce</a>
+        </div>
+    </form>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Publier votre annonce</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="NomInput" class="form-label">Lieu de départ</label>
+              <input type="text" class="form-control" id="NomInput" placeholder="Votre nom" name="Nom"> 
+          </div>
+            <div class="mb-3">
+              <label for="NomInput" class="form-label">Lieu d'arrivée</label>
+              <input type="text" class="form-control" id="NomInput" placeholder="Votre nom" name="Nom"> 
+          </div>
+            <div class="mb-3">
+              <label for="NomInput" class="form-label">Date de départ</label>
+              <input type="date" class="form-control" id="NomInput" placeholder="Votre nom" name="Nom"> 
+          </div>
+            <div class="mb-3">
+              <label for="NomInput" class="form-label">Heure de départ</label>
+              <input type="time" class="form-control" id="NomInput" placeholder="Votre nom" name="Nom"> 
+          </div>
+          <div class="mb-3">
+            <label for="NomInput" class="form-label">Nombre de places</label>
+            <input type="number" class="form-control" id="NomInput" placeholder="Votre nom" name="Nom"> 
+        </div>
+          <div class="form-check form-switch mb-3">
+            <label class="form-check-label" for="flexSwitchCheckChecked">Trajet régulier</label>
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+        </div>
+        </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
